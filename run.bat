@@ -1,1 +1,1 @@
-robot --outputdir report test.robot
+robot --outputdir report example.robot
