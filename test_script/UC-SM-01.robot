@@ -14,6 +14,7 @@ Reset App And Close
     Close Application
 
 *** Test Cases ***
+# TC-SM-01
 Add Channel To Subscription
 
     # 點擊右上角「搜尋」按鈕
