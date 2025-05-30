@@ -3,15 +3,10 @@ Library    AppiumLibrary
 Library    Process
 Resource    ../config/settings.robot
 Resource    ../config/variables.robot
+Resource    ./keywords/keywords.robot
 
 Test Setup     Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    automationName=${AUTOMATION_NAME}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
 Test Teardown  Reset App And Close
-
-*** Keywords ***
-Reset App And Close
-    Run Process    adb    shell    pm clear ${APP_PACKAGE}
-    Sleep    1s
-    Close Application
 
 *** Test Cases ***
 # TC-SM-01

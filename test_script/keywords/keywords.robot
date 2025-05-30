@@ -1,4 +1,9 @@
 *** Keywords ***
+Reset App And Close
+    Run Process    adb    shell    pm clear ${APP_PACKAGE}
+    Sleep    1s
+    Close Application
+
 Prepare Queue With One Podcast
     # 點擊右上角「搜尋」按鈕
     Wait Until Page Contains Element    id=de.danoeh.antennapod.debug:id/action_search    timeout=10s
