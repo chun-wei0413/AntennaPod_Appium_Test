@@ -12,7 +12,7 @@ timeout /t 5 /nobreak >nul
 REM ——————————————————————————————
 REM 3. 執行 Robot Framework 測試
 REM ——————————————————————————————
-robot --outputdir report example.robot
+robot --outputdir report test_script
 
 REM ——————————————————————————————
 REM 4. （可選）測試結束後關閉 Appium Server 視窗

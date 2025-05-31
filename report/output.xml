@@ -1,13 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.2.2 (Python 3.12.2 on win32)" generated="2025-05-31T13:55:01.285590" rpa="false" schemaversion="5">
-<suite id="s1" name="Example" source="C:\Users\user\Desktop\Appium Testing\AntennaPod\example.robot">
-<test id="s1-t1" name="Clear Queue And Assert Empty Message" line="10">
+<robot generator="Robot 7.2.2 (Python 3.12.2 on win32)" generated="2025-05-31T13:59:23.057191" rpa="false" schemaversion="5">
+<suite id="s1" name="Test Script" source="C:\Users\user\Desktop\Appium Testing\AntennaPod\test_script">
+<suite id="s1-s1" name="UC-QC-05" source="C:\Users\user\Desktop\Appium Testing\AntennaPod\test_script\UC-QC-05.robot">
+<test id="s1-s1-t1" name="Sort empty queue" line="13">
 <kw name="Open Application" owner="AppiumLibrary" type="SETUP">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2025-05-31T13:55:07.656637" elapsed="0.000000">Execution terminated by signal</status>
-</kw>
-<msg time="2025-05-31T13:55:07.657637" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
 <arg>${REMOTE_URL}</arg>
 <arg>platformName=${PLATFORM_NAME}</arg>
 <arg>automationName=${AUTOMATION_NAME}</arg>
@@ -21,40 +17,1663 @@ Please check https://appium.io/docs/en/2.1/cli/args/
 | remote_url          | Yes    | Appium server url |
 | alias               | no     | alias             |
 | strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
-<status status="FAIL" start="2025-05-31T13:55:01.549588" elapsed="6.108049">Execution terminated by signal</status>
+<status status="PASS" start="2025-05-31T13:59:23.234191" elapsed="5.212072"/>
 </kw>
-<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
-<kw name="Capture Page Screenshot" owner="AppiumLibrary">
-<msg time="2025-05-31T13:55:07.658637" level="FAIL">No application is open</msg>
-<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
-<status status="FAIL" start="2025-05-31T13:55:07.658637" elapsed="0.063000">No application is open</status>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:29.916898" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:28.447262" elapsed="1.469636"/>
 </kw>
-<msg time="2025-05-31T13:55:07.722640" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
-<msg time="2025-05-31T13:55:07.722640" level="FAIL">No application is open</msg>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:29.917898" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]'.</msg>
+<msg time="2025-05-31T13:59:30.052899" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:29.916898" elapsed="0.136001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:31.128914" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:30.052899" elapsed="1.076015"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:31.129913" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-31T13:59:31.247916" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:31.128914" elapsed="0.119002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:32.330406" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:31.248913" elapsed="1.081493"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:32.332406" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]'.</msg>
+<msg time="2025-05-31T13:59:33.711191" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:32.331407" elapsed="1.379784"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:33.758193" level="INFO">xpath criteria: //android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:33.711191" elapsed="0.047002"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:33.759193" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]'.</msg>
+<msg time="2025-05-31T13:59:34.466587" level="INFO">xpath criteria: //android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:33.759193" elapsed="0.707394"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:34.467588" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]'.</msg>
+<msg time="2025-05-31T13:59:35.095596" level="INFO">xpath criteria: //android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]</msg>
+<arg>xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:34.466587" elapsed="0.629009"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:35.139451" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:35.095596" elapsed="0.043855"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:35.140449" level="INFO">Verifying element 'id=de.danoeh.antennapod.debug:id/emptyViewTitle' contains exactly text 'No queued episodes'.</msg>
+<msg time="2025-05-31T13:59:35.192450" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>No queued episodes</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-31T13:59:35.139451" elapsed="0.053998"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T13:59:35.193449" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T13:59:35.197449" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T13:59:35.396007" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T13:59:35.193449" elapsed="0.202558"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T13:59:36.396063" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T13:59:35.396007" elapsed="1.000056"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
 <doc>Closes the current application and also close webdriver session.</doc>
-<status status="FAIL" start="2025-05-31T13:55:07.658637" elapsed="0.065001">No application is open</status>
+<status status="PASS" start="2025-05-31T13:59:36.396063" elapsed="0.254005"/>
 </kw>
-<doc>點擊佇列、清除佇列、確認顯示 "No queued episodes"</doc>
-<status status="FAIL" start="2025-05-31T13:55:01.548588" elapsed="6.175050">Setup failed:
-Execution terminated by signal
-
-Also teardown failed:
-No application is open</status>
+<status status="PASS" start="2025-05-31T13:59:35.193449" elapsed="1.457617"/>
+</kw>
+<status status="PASS" start="2025-05-31T13:59:23.233195" elapsed="13.417871"/>
 </test>
-<status status="FAIL" start="2025-05-31T13:55:01.287588" elapsed="6.437049"/>
+<test id="s1-s1-t2" name="Sort queue with one podcast" line="38">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-31T13:59:36.651066" elapsed="3.845032"/>
+</kw>
+<kw name="Prepare Queue With One Podcast" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:41.496208" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-05-31T13:59:40.497100" elapsed="0.999108"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:41.497208" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/action_search'.</msg>
+<msg time="2025-05-31T13:59:41.616210" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:41.496208" elapsed="0.120002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:43.094000" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:41.617211" elapsed="1.476789"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:43.094000" level="INFO">Typing text 'nba' into text field 'id=de.danoeh.antennapod.debug:id/search_src_text'</msg>
+<msg time="2025-05-31T13:59:43.820312" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>nba</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:43.094000" elapsed="0.726312"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:45.446944" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton
+criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:43.820312" elapsed="1.626632"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:45.447944" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/actionButton'.</msg>
+<msg time="2025-05-31T13:59:46.030944" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:45.447944" elapsed="0.583000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:49.345007" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:46.030944" elapsed="3.314063"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:49.346008" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]'.</msg>
+<msg time="2025-05-31T13:59:50.371042" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:49.345007" elapsed="1.026035"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:54.920216" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:50.372045" elapsed="4.548171"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:54.921217" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]'.</msg>
+<msg time="2025-05-31T13:59:55.049218" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:54.920216" elapsed="0.129002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:56.505925" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:55.049218" elapsed="1.456707"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:56.506926" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/butAction1Text'.</msg>
+<msg time="2025-05-31T13:59:56.620540" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:56.505925" elapsed="0.114615"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:58.354093" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:56.621539" elapsed="1.732554"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:58.355097" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T13:59:58.916307" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:58.354093" elapsed="0.562214"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:59.852033" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]
+xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:58.916307" elapsed="0.936723"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T13:59:59.853030" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T13:59:59.966050" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T13:59:59.853030" elapsed="0.113020"/>
+</kw>
+<status status="PASS" start="2025-05-31T13:59:40.497100" elapsed="19.468950"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:00.653737" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T13:59:59.966050" elapsed="0.687687"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:00.654737" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]'.</msg>
+<msg time="2025-05-31T14:00:00.818998" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:00.653737" elapsed="0.165261"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:02.907799" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:00.818998" elapsed="2.088801"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:02.908801" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-31T14:00:03.015970" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:02.907799" elapsed="0.108171"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:04.035161" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:03.015970" elapsed="1.019191"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:04.036163" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]'.</msg>
+<msg time="2025-05-31T14:00:05.412411" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:04.036163" elapsed="1.376248"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:05.448413" level="INFO">xpath criteria: //android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:05.413422" elapsed="0.034991"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:05.449411" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]'.</msg>
+<msg time="2025-05-31T14:00:05.531931" level="INFO">xpath criteria: //android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:05.449411" elapsed="0.082520"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:05.532931" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]'.</msg>
+<msg time="2025-05-31T14:00:06.859056" level="INFO">xpath criteria: //android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]</msg>
+<arg>xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:05.531931" elapsed="1.327125"/>
+</kw>
+<kw name="Get Webelements" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:06.914056" level="INFO">xpath criteria: //androidx.recyclerview.widget.RecyclerView[@resource-id="de.danoeh.antennapod.debug:id/recyclerView"]/*</msg>
+<msg time="2025-05-31T14:00:06.914056" level="INFO">${items} = [&lt;appium.webdriver.webelement.WebElement (session="6bc6b848-fc27-4bc8-aa32-14bffa89efef", element="00000000-0000-0054-ffff-ffff000004e3")&gt;]</msg>
+<var>${items}</var>
+<arg>xpath=//androidx.recyclerview.widget.RecyclerView[@resource-id="de.danoeh.antennapod.debug:id/recyclerView"]/*</arg>
+<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
+<status status="PASS" start="2025-05-31T14:00:06.860059" elapsed="0.053997"/>
+</kw>
+<kw name="Length Should Be" owner="BuiltIn">
+<msg time="2025-05-31T14:00:06.915058" level="INFO">Length is 1.</msg>
+<arg>${items}</arg>
+<arg>1</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="PASS" start="2025-05-31T14:00:06.914056" elapsed="0.001002"/>
+</kw>
+<kw name="Get Text" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:06.975070" level="INFO">Element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]' text is 'Can the Knicks force game 7?' </msg>
+<msg time="2025-05-31T14:00:06.975070" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<msg time="2025-05-31T14:00:06.975070" level="INFO">${item_text} = Can the Knicks force game 7?</msg>
+<var>${item_text}</var>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<doc>Get element text (for hybrid and mobile browser use `xpath` locator, others might cause problem)</doc>
+<status status="PASS" start="2025-05-31T14:00:06.915058" elapsed="0.060012"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${item_text}</arg>
+<arg>Can the Knicks force game 7?</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-31T14:00:06.976070" elapsed="0.000000"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T14:00:06.976070" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T14:00:06.978067" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T14:00:07.284561" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T14:00:06.976070" elapsed="0.308491"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T14:00:08.285863" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T14:00:07.285561" elapsed="1.000302"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-31T14:00:08.285863" elapsed="0.271239"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:06.976070" elapsed="1.581032"/>
+</kw>
+<status status="PASS" start="2025-05-31T13:59:36.651066" elapsed="31.906036"/>
+</test>
+<test id="s1-s1-t3" name="Sort queue with at least two podcasts" line="71">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-31T14:00:08.558101" elapsed="4.923746"/>
+</kw>
+<kw name="Prepare Queue With Two Podcast" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:14.492053" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-05-31T14:00:13.481847" elapsed="1.010206"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:14.493050" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/action_search'.</msg>
+<msg time="2025-05-31T14:00:14.599052" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:14.493050" elapsed="0.106002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:16.074073" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:14.599052" elapsed="1.475021"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:16.075074" level="INFO">Typing text 'nba' into text field 'id=de.danoeh.antennapod.debug:id/search_src_text'</msg>
+<msg time="2025-05-31T14:00:16.786874" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>nba</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:16.074073" elapsed="0.712801"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:18.213174" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton
+criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:16.786874" elapsed="1.427301"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:18.214175" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/actionButton'.</msg>
+<msg time="2025-05-31T14:00:18.301190" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:18.214175" elapsed="0.087015"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:21.835390" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:18.301190" elapsed="3.534200"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:21.836388" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]'.</msg>
+<msg time="2025-05-31T14:00:22.840765" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:21.835390" elapsed="1.005375"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:27.213823" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:22.840765" elapsed="4.373058"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:27.214825" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]'.</msg>
+<msg time="2025-05-31T14:00:27.348035" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:27.213823" elapsed="0.134212"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:28.765977" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:27.349034" elapsed="1.416943"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:28.766974" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/butAction1Text'.</msg>
+<msg time="2025-05-31T14:00:28.849257" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:28.765977" elapsed="0.083280"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:30.538852" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:28.849257" elapsed="1.689595"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:30.539852" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T14:00:30.649864" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:30.538852" elapsed="0.111012"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:32.114346" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Thunder advance to NBA Finals"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Thunder advance to NBA Finals"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Thunder advance to NBA Finals"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:30.649864" elapsed="1.465482"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:32.115346" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Thunder advance to NBA Finals"]'.</msg>
+<msg time="2025-05-31T14:00:32.249349" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Thunder advance to NBA Finals"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Thunder advance to NBA Finals"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:32.115346" elapsed="0.134003"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:33.074867" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:32.249349" elapsed="0.825518"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:33.075865" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/butAction1Text'.</msg>
+<msg time="2025-05-31T14:00:33.183869" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:33.074867" elapsed="0.109002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:34.514743" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:33.183869" elapsed="1.330874"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:34.514743" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T14:00:34.631751" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:34.514743" elapsed="0.117008"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:36.122671" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]
+xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:34.631751" elapsed="1.490920"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:36.123670" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T14:00:36.266671" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:36.122671" elapsed="0.144000"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:13.481847" elapsed="22.784824"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:38.047614" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]
+xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:36.266671" elapsed="1.780943"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:38.048612" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]'.</msg>
+<msg time="2025-05-31T14:00:40.013679" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:38.047614" elapsed="1.966065"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:40.086681" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:40.014681" elapsed="0.072000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:40.087680" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-31T14:00:40.220700" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:40.086681" elapsed="0.134019"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:41.203869" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:40.221701" elapsed="0.982168"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:41.204870" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]'.</msg>
+<msg time="2025-05-31T14:00:42.595634" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:41.203869" elapsed="1.392765"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:42.631632" level="INFO">xpath criteria: //android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:42.596634" elapsed="0.034998"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:42.632632" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]'.</msg>
+<msg time="2025-05-31T14:00:43.332829" level="INFO">xpath criteria: //android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:42.631632" elapsed="0.701197"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:43.333830" level="INFO">Clicking element 'xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]'.</msg>
+<msg time="2025-05-31T14:00:43.949845" level="INFO">xpath criteria: //android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]</msg>
+<arg>xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:43.332829" elapsed="0.617016"/>
+</kw>
+<kw name="Get Webelements" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:44.002865" level="INFO">xpath criteria: //androidx.recyclerview.widget.RecyclerView[@resource-id="de.danoeh.antennapod.debug:id/recyclerView"]/*</msg>
+<msg time="2025-05-31T14:00:44.002865" level="INFO">${items} = [&lt;appium.webdriver.webelement.WebElement (session="74c09718-5056-4125-b57a-4e1cc6d5aba6", element="00000000-0000-0063-ffff-ffff0000068d")&gt;, &lt;appium.webdriver.webelement.WebElement (session="74c09718-5...</msg>
+<var>${items}</var>
+<arg>xpath=//androidx.recyclerview.widget.RecyclerView[@resource-id="de.danoeh.antennapod.debug:id/recyclerView"]/*</arg>
+<doc>Returns list of [http://selenium-python.readthedocs.io/api.html#module-selenium.webdriver.remote.webelement|WebElement] objects matching ``locator``.</doc>
+<status status="PASS" start="2025-05-31T14:00:43.949845" elapsed="0.053020"/>
+</kw>
+<kw name="Length Should Be" owner="BuiltIn">
+<msg time="2025-05-31T14:00:44.003868" level="INFO">Length is 2.</msg>
+<arg>${items}</arg>
+<arg>2</arg>
+<doc>Verifies that the length of the given item is correct.</doc>
+<status status="PASS" start="2025-05-31T14:00:44.003868" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:44.068429" level="INFO">Element 'xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]' attribute 'content-desc' value 'Can the Knicks force game 7?' </msg>
+<msg time="2025-05-31T14:00:44.068429" level="INFO">xpath criteria: (//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]</msg>
+<msg time="2025-05-31T14:00:44.068429" level="INFO">${first_title} = Can the Knicks force game 7?</msg>
+<var>${first_title}</var>
+<arg>xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-05-31T14:00:44.003868" elapsed="0.064561"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${first_title}</arg>
+<arg>Can the Knicks force game 7?</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-31T14:00:44.068429" elapsed="0.000000"/>
+</kw>
+<kw name="Get Element Attribute" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:44.129429" level="INFO">Element 'xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]' attribute 'content-desc' value 'Thunder advance to NBA Finals' </msg>
+<msg time="2025-05-31T14:00:44.129429" level="INFO">xpath criteria: (//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]</msg>
+<msg time="2025-05-31T14:00:44.129429" level="INFO">${second_title} = Thunder advance to NBA Finals</msg>
+<var>${second_title}</var>
+<arg>xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]</arg>
+<arg>content-desc</arg>
+<doc>Get element attribute using given attribute: name, value,...</doc>
+<status status="PASS" start="2025-05-31T14:00:44.068429" elapsed="0.061000"/>
+</kw>
+<kw name="Should Be Equal" owner="BuiltIn">
+<arg>${second_title}</arg>
+<arg>Thunder advance to NBA Finals</arg>
+<doc>Fails if the given objects are unequal.</doc>
+<status status="PASS" start="2025-05-31T14:00:44.130430" elapsed="0.000000"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T14:00:44.131427" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T14:00:44.133431" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T14:00:44.454405" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T14:00:44.130430" elapsed="0.324976"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T14:00:45.455975" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T14:00:44.455406" elapsed="1.000569"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-31T14:00:45.455975" elapsed="0.258712"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:44.130430" elapsed="1.584257"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:08.557102" elapsed="37.157585"/>
+</test>
+<status status="PASS" start="2025-05-31T13:59:23.074192" elapsed="82.641497"/>
+</suite>
+<suite id="s1-s2" name="UC-QC-06" source="C:\Users\user\Desktop\Appium Testing\AntennaPod\test_script\UC-QC-06.robot">
+<test id="s1-s2-t1" name="Queue is empty when lock queue" line="13">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-31T14:00:45.719687" elapsed="3.893950"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:51.033566" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:49.613637" elapsed="1.419929"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:51.034567" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]'.</msg>
+<msg time="2025-05-31T14:00:51.168568" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:51.033566" elapsed="0.136002"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:52.297653" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:51.169568" elapsed="1.128085"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:52.298654" level="INFO">Verifying element 'id=de.danoeh.antennapod.debug:id/emptyViewTitle' contains exactly text 'No queued episodes'.</msg>
+<msg time="2025-05-31T14:00:52.352653" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>No queued episodes</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-31T14:00:52.297653" elapsed="0.055000"/>
+</kw>
+<kw name="Clear Queue and Verify Empty" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:52.423654" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:52.353654" elapsed="0.070000"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:52.424655" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-31T14:00:52.533703" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:52.423654" elapsed="0.110049"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:53.560365" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:52.533703" elapsed="1.026662"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:53.560365" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]'.</msg>
+<msg time="2025-05-31T14:00:54.828574" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:53.560365" elapsed="1.268209"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:54.868573" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:54.828574" elapsed="0.039999"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:54.869572" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<msg time="2025-05-31T14:00:54.964574" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:00:54.868573" elapsed="0.096001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:55.624773" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:00:54.965574" elapsed="0.659199"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-05-31T14:00:55.625773" level="INFO">Verifying element 'id=de.danoeh.antennapod.debug:id/emptyViewTitle' contains exactly text 'No queued episodes'.</msg>
+<msg time="2025-05-31T14:00:55.679773" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>No queued episodes</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-31T14:00:55.624773" elapsed="0.055000"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:52.353654" elapsed="3.326119"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T14:00:55.679773" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T14:00:55.681773" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T14:00:55.803773" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T14:00:55.679773" elapsed="0.124000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T14:00:56.804103" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T14:00:55.803773" elapsed="1.000330"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-31T14:00:56.804103" elapsed="0.243999"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:55.679773" elapsed="1.368329"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:45.719687" elapsed="11.328415"/>
+</test>
+<test id="s1-s2-t2" name="Queue is not empty when lock queue" line="26">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-31T14:00:57.049103" elapsed="3.875079"/>
+</kw>
+<kw name="Prepare Queue With One Podcast" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:01.918195" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-05-31T14:01:00.925178" elapsed="0.993017"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:01.919196" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/action_search'.</msg>
+<msg time="2025-05-31T14:01:02.049195" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:01.918195" elapsed="0.132000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:03.527841" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:02.050195" elapsed="1.477646"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:03.528839" level="INFO">Typing text 'nba' into text field 'id=de.danoeh.antennapod.debug:id/search_src_text'</msg>
+<msg time="2025-05-31T14:01:04.245268" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>nba</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:03.527841" elapsed="0.717427"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:05.646840" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton
+criteria is de.danoeh.antennapod.debug:id/actionButton
+criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:04.245268" elapsed="1.401572"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:05.647840" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/actionButton'.</msg>
+<msg time="2025-05-31T14:01:05.754839" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:05.646840" elapsed="0.109004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:09.789074" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:05.755844" elapsed="4.033230"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:09.790073" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]'.</msg>
+<msg time="2025-05-31T14:01:10.840044" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:09.789074" elapsed="1.050970"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:15.391809" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:10.840044" elapsed="4.551765"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:15.392809" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]'.</msg>
+<msg time="2025-05-31T14:01:15.519812" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:15.391809" elapsed="0.128003"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:16.897991" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:15.519812" elapsed="1.378179"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:16.898991" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/butAction1Text'.</msg>
+<msg time="2025-05-31T14:01:16.998944" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:16.897991" elapsed="0.100953"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:18.777820" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:16.998944" elapsed="1.778876"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:18.778820" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T14:01:18.866954" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:18.777820" elapsed="0.089134"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:20.249806" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]
+xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:18.866954" elapsed="1.382852"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:20.250809" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T14:01:20.349739" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:20.249806" elapsed="0.099933"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:00.925178" elapsed="19.424561"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:20.914469" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:20.350742" elapsed="0.563727"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:20.915468" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]'.</msg>
+<msg time="2025-05-31T14:01:22.217815" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:20.915468" elapsed="1.302347"/>
+</kw>
+<kw name="Clear Queue and Verify Empty" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:23.278950" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:22.218815" elapsed="1.060135"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:23.279950" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-31T14:01:23.401951" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:23.279950" elapsed="0.122001"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:24.587935" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:23.401951" elapsed="1.186989"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:24.589935" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]'.</msg>
+<msg time="2025-05-31T14:01:25.859777" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:24.588940" elapsed="1.270837"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:25.911779" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:25.860778" elapsed="0.051001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:25.912778" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<msg time="2025-05-31T14:01:25.984781" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:25.912778" elapsed="0.072003"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:27.172810" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:25.984781" elapsed="1.188029"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:27.173811" level="INFO">Verifying element 'id=de.danoeh.antennapod.debug:id/emptyViewTitle' contains exactly text 'No queued episodes'.</msg>
+<msg time="2025-05-31T14:01:27.206811" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>No queued episodes</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-31T14:01:27.172810" elapsed="0.034001"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:22.217815" elapsed="4.988996"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T14:01:27.207811" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T14:01:27.209811" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T14:01:27.494891" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T14:01:27.207811" elapsed="0.288079"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T14:01:28.496442" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T14:01:27.495890" elapsed="1.000552"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-31T14:01:28.496442" elapsed="0.293538"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:27.207811" elapsed="1.582169"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:00:57.048102" elapsed="31.741878"/>
+</test>
+<status status="PASS" start="2025-05-31T14:00:45.715689" elapsed="43.075159"/>
+</suite>
+<suite id="s1-s3" name="UC-QC-07" source="C:\Users\user\Desktop\Appium Testing\AntennaPod\test_script\UC-QC-07.robot">
+<test id="s1-s3-t1" name="Queue is empty whten lock queue" line="13">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-31T14:01:28.794849" elapsed="5.257978"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:35.519873" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:34.052827" elapsed="1.467046"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:35.520872" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]'.</msg>
+<msg time="2025-05-31T14:01:35.665801" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:35.519873" elapsed="0.145928"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:36.782673" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:35.666553" elapsed="1.116120"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:36.783672" level="INFO">Verifying element 'id=de.danoeh.antennapod.debug:id/emptyViewTitle' contains exactly text 'No queued episodes'.</msg>
+<msg time="2025-05-31T14:01:36.839185" level="INFO">criteria is de.danoeh.antennapod.debug:id/emptyViewTitle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/emptyViewTitle</arg>
+<arg>No queued episodes</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-31T14:01:36.782673" elapsed="0.056512"/>
+</kw>
+<kw name="Lock Queue" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:36.900700" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:36.840186" elapsed="0.060514"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:36.901700" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-31T14:01:37.014699" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:36.900700" elapsed="0.113999"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:38.096700" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:37.014699" elapsed="1.082001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:38.097700" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]'.</msg>
+<msg time="2025-05-31T14:01:39.428492" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:38.096700" elapsed="1.331792"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:39.470394" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:39.428492" elapsed="0.041902"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:39.471396" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<msg time="2025-05-31T14:01:39.549921" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:39.470394" elapsed="0.079527"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:36.840186" elapsed="2.709735"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:40.634942" level="INFO">criteria is de.danoeh.antennapod.debug:id/snackbar_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/snackbar_text</arg>
+<arg>timeout=5</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:39.549921" elapsed="1.085021"/>
+</kw>
+<kw name="Element Text Should Be" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:40.635943" level="INFO">Verifying element 'id=de.danoeh.antennapod.debug:id/snackbar_text' contains exactly text 'Queue locked'.</msg>
+<msg time="2025-05-31T14:01:40.704841" level="INFO">criteria is de.danoeh.antennapod.debug:id/snackbar_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/snackbar_text</arg>
+<arg>Queue locked</arg>
+<doc>Verifies element identified by ``locator`` exactly contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-31T14:01:40.634942" elapsed="0.069899"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T14:01:40.705840" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T14:01:40.707838" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T14:01:40.844947" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T14:01:40.705840" elapsed="0.139107"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T14:01:41.845364" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T14:01:40.844947" elapsed="1.000417"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-31T14:01:41.845364" elapsed="0.248627"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:40.705840" elapsed="1.388151"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:28.794849" elapsed="13.300141"/>
+</test>
+<test id="s1-s3-t2" name="Queue is not empty when lock queue" line="30">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-31T14:01:42.094990" elapsed="6.968997"/>
+</kw>
+<kw name="Prepare Queue With One Podcast" owner="keywords">
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:50.071074" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-05-31T14:01:49.064987" elapsed="1.006087"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:50.072074" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/action_search'.</msg>
+<msg time="2025-05-31T14:01:50.205074" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:50.071074" elapsed="0.134000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:51.789948" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:50.205074" elapsed="1.584874"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:51.791948" level="INFO">Typing text 'nba' into text field 'id=de.danoeh.antennapod.debug:id/search_src_text'</msg>
+<msg time="2025-05-31T14:01:52.683000" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>nba</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:51.789948" elapsed="0.893052"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:54.183494" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton
+criteria is de.danoeh.antennapod.debug:id/actionButton
+criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:52.683999" elapsed="1.499495"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:54.184497" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/actionButton'.</msg>
+<msg time="2025-05-31T14:01:54.360999" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:54.183494" elapsed="0.177505"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:57.425718" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:54.360999" elapsed="3.064719"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:01:57.426718" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]'.</msg>
+<msg time="2025-05-31T14:01:58.560752" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:01:57.425718" elapsed="1.135034"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:05.291531" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:01:58.560752" elapsed="6.730779"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:05.292530" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]'.</msg>
+<msg time="2025-05-31T14:02:05.575873" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="Can the Knicks force game 7?"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:05.291531" elapsed="0.284342"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:07.952901" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:05.576879" elapsed="2.376022"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:07.953898" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/butAction1Text'.</msg>
+<msg time="2025-05-31T14:02:08.537207" level="INFO">criteria is de.danoeh.antennapod.debug:id/butAction1Text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butAction1Text</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:07.952901" elapsed="0.585305"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:10.292033" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:08.538206" elapsed="1.754829"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:10.294035" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T14:02:11.318407" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:10.293035" elapsed="1.025372"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:14.372805" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:11.318407" elapsed="3.054398"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:14.373803" level="INFO">Clicking element 'xpath=//android.widget.ImageButton[@content-desc="Back"]'.</msg>
+<msg time="2025-05-31T14:02:15.356645" level="INFO">xpath criteria: //android.widget.ImageButton[@content-desc="Back"]</msg>
+<arg>xpath=//android.widget.ImageButton[@content-desc="Back"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:14.372805" elapsed="0.983840"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:49.063987" elapsed="26.292658"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:17.817554" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:15.369643" elapsed="2.448912"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:17.820554" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]'.</msg>
+<msg time="2025-05-31T14:02:19.024405" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:17.819555" elapsed="1.205851"/>
+</kw>
+<kw name="Lock Queue" owner="keywords">
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:20.981970" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]
+xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:19.028403" elapsed="1.953567"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:20.983970" level="INFO">Clicking element 'xpath=//android.widget.ImageView[@content-desc="More options"]'.</msg>
+<msg time="2025-05-31T14:02:21.197974" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="More options"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="More options"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:20.981970" elapsed="0.216004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:22.750981" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:21.198972" elapsed="1.552009"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:22.751979" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]'.</msg>
+<msg time="2025-05-31T14:02:24.232397" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:22.750981" elapsed="1.481416"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:24.280398" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:24.232397" elapsed="0.048001"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:24.281397" level="INFO">Clicking element 'xpath=//android.widget.Button[@resource-id="android:id/button1"]'.</msg>
+<msg time="2025-05-31T14:02:24.403399" level="INFO">xpath criteria: //android.widget.Button[@resource-id="android:id/button1"]</msg>
+<arg>xpath=//android.widget.Button[@resource-id="android:id/button1"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:24.280398" elapsed="0.124001"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:02:19.027408" elapsed="5.376991"/>
+</kw>
+<kw name="Page Should Not Contain Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:24.787495" level="INFO">Current page not contains element 'id=de.danoeh.antennapod.debug:id/drag_handle'.</msg>
+<msg time="2025-05-31T14:02:24.787495" level="INFO">criteria is de.danoeh.antennapod.debug:id/drag_handle</msg>
+<arg>id=de.danoeh.antennapod.debug:id/drag_handle</arg>
+<doc>Verifies that current page not contains `locator` element.</doc>
+<status status="PASS" start="2025-05-31T14:02:24.404399" elapsed="0.383096"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T14:02:24.788494" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T14:02:24.792494" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T14:02:25.033494" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T14:02:24.788494" elapsed="0.245000"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T14:02:26.034205" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T14:02:25.033494" elapsed="1.000711"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-31T14:02:26.034205" elapsed="0.313931"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:02:24.788494" elapsed="1.559642"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:01:42.094990" elapsed="44.253146"/>
+</test>
+<status status="PASS" start="2025-05-31T14:01:28.790848" elapsed="57.558288"/>
+</suite>
+<suite id="s1-s4" name="UC-SM-01" source="C:\Users\user\Desktop\Appium Testing\AntennaPod\test_script\UC-SM-01.robot">
+<test id="s1-s4-t1" name="Add Channel To Subscription" line="13">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="PASS" start="2025-05-31T14:02:26.354134" elapsed="5.666807"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:33.032944" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until element specified with `locator` appears on current page.</doc>
+<status status="PASS" start="2025-05-31T14:02:32.020941" elapsed="1.012003"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:33.034941" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/action_search'.</msg>
+<msg time="2025-05-31T14:02:33.169943" level="INFO">criteria is de.danoeh.antennapod.debug:id/action_search</msg>
+<arg>id=de.danoeh.antennapod.debug:id/action_search</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:33.033943" elapsed="0.136000"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:34.691607" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:33.170943" elapsed="1.520664"/>
+</kw>
+<kw name="Input Text" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:34.692603" level="INFO">Typing text 'nba' into text field 'id=de.danoeh.antennapod.debug:id/search_src_text'</msg>
+<msg time="2025-05-31T14:02:35.425600" level="INFO">criteria is de.danoeh.antennapod.debug:id/search_src_text</msg>
+<arg>id=de.danoeh.antennapod.debug:id/search_src_text</arg>
+<arg>nba</arg>
+<doc>Types the given `text` into text field identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:34.691607" elapsed="0.733993"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:36.868678" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton
+criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:35.425600" elapsed="1.443078"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:36.870682" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/actionButton'.</msg>
+<msg time="2025-05-31T14:02:37.002682" level="INFO">criteria is de.danoeh.antennapod.debug:id/actionButton</msg>
+<arg>id=de.danoeh.antennapod.debug:id/actionButton</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:36.868678" elapsed="0.134004"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:40.681726" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
+xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<arg>timeout=15</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:37.003685" elapsed="3.678041"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:40.682725" level="INFO">Clicking element 'xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]'.</msg>
+<msg time="2025-05-31T14:02:41.855806" level="INFO">xpath criteria: //android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:40.681726" elapsed="1.174080"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:46.720631" level="INFO">criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe
+criteria is de.danoeh.antennapod.debug:id/butSubscribe</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butSubscribe</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:41.855806" elapsed="4.864825"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:46.721633" level="INFO">Clicking element 'id=de.danoeh.antennapod.debug:id/butSubscribe'.</msg>
+<msg time="2025-05-31T14:02:46.871400" level="INFO">criteria is de.danoeh.antennapod.debug:id/butSubscribe</msg>
+<arg>id=de.danoeh.antennapod.debug:id/butSubscribe</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:46.721633" elapsed="0.149767"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:49.445404" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[4]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[4]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:46.871400" elapsed="2.574004"/>
+</kw>
+<kw name="Click Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:49.447404" level="INFO">Clicking element 'xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[4]'.</msg>
+<msg time="2025-05-31T14:02:51.859400" level="INFO">xpath criteria: (//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[4]</msg>
+<arg>xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[4]</arg>
+<doc>Click element identified by `locator`.</doc>
+<status status="PASS" start="2025-05-31T14:02:49.446402" elapsed="2.413997"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:51.917237" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="The Athletic NBA Daily"]</arg>
+<arg>timeout=10</arg>
+<doc>Waits until element specified with `locator` is visible.</doc>
+<status status="PASS" start="2025-05-31T14:02:51.860399" elapsed="0.056838"/>
+</kw>
+<kw name="Page Should Contain Element" owner="AppiumLibrary">
+<msg time="2025-05-31T14:02:51.953923" level="INFO">Current page contains element 'xpath=//android.widget.ImageView[@content-desc="The Athletic NBA Daily"]'.</msg>
+<msg time="2025-05-31T14:02:51.953923" level="INFO">xpath criteria: //android.widget.ImageView[@content-desc="The Athletic NBA Daily"]</msg>
+<arg>xpath=//android.widget.ImageView[@content-desc="The Athletic NBA Daily"]</arg>
+<doc>Verifies that current page contains `locator` element.</doc>
+<status status="PASS" start="2025-05-31T14:02:51.917237" elapsed="0.036686"/>
+</kw>
+<kw name="Reset App And Close" owner="keywords" type="TEARDOWN">
+<kw name="Run Process" owner="Process">
+<msg time="2025-05-31T14:02:51.954919" level="INFO">Starting process:
+adb shell "pm clear de.danoeh.antennapod.debug"</msg>
+<msg time="2025-05-31T14:02:51.956919" level="INFO">Waiting for process to complete.</msg>
+<msg time="2025-05-31T14:02:52.208447" level="INFO">Process completed.</msg>
+<arg>adb</arg>
+<arg>shell</arg>
+<arg>pm clear ${APP_PACKAGE}</arg>
+<doc>Runs a process and waits for it to complete.</doc>
+<status status="PASS" start="2025-05-31T14:02:51.954919" elapsed="0.253528"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-05-31T14:02:53.210138" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-05-31T14:02:52.208447" elapsed="1.001691"/>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary">
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="PASS" start="2025-05-31T14:02:53.210138" elapsed="0.368989"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:02:51.954919" elapsed="1.624208"/>
+</kw>
+<status status="PASS" start="2025-05-31T14:02:26.353134" elapsed="27.225993"/>
+</test>
+<status status="PASS" start="2025-05-31T14:02:26.349136" elapsed="27.230993"/>
+</suite>
+<status status="PASS" start="2025-05-31T13:59:23.059191" elapsed="210.521937"/>
 </suite>
 <statistics>
 <total>
-<stat pass="0" fail="1" skip="0">All Tests</stat>
+<stat pass="8" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat name="Example" id="s1" pass="0" fail="1" skip="0">Example</stat>
+<stat name="Test Script" id="s1" pass="8" fail="0" skip="0">Test Script</stat>
+<stat name="UC-QC-05" id="s1-s1" pass="3" fail="0" skip="0">Test Script.UC-QC-05</stat>
+<stat name="UC-QC-06" id="s1-s2" pass="2" fail="0" skip="0">Test Script.UC-QC-06</stat>
+<stat name="UC-QC-07" id="s1-s3" pass="2" fail="0" skip="0">Test Script.UC-QC-07</stat>
+<stat name="UC-SM-01" id="s1-s4" pass="1" fail="0" skip="0">Test Script.UC-SM-01</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2025-05-31T13:55:07.657637" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
-<msg time="2025-05-31T13:55:07.722640" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
 </errors>
 </robot>
