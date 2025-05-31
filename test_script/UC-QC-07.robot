@@ -11,7 +11,6 @@ Test Teardown  Reset App And Close
 *** Test Cases ***
 # TC-QC-07-02
 Queue is empty whten lock queue
-
     # 點擊 "Queue" 頁面
     Wait Until Element Is Visible     xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]     timeout=10
     Click Element                     xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]
@@ -27,6 +26,7 @@ Queue is empty whten lock queue
     Element Text Should Be           id=de.danoeh.antennapod.debug:id/snackbar_text    Queue locked
 
 # TC-QC-07-01
+
 Queue is not empty when lock queue
     Prepare Queue With One Podcast
 

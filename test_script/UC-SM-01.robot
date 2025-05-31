@@ -11,7 +11,6 @@ Test Teardown  Reset App And Close
 *** Test Cases ***
 # TC-SM-01
 Add Channel To Subscription
-
     # 點擊右上角「搜尋」按鈕
     Wait Until Page Contains Element    id=de.danoeh.antennapod.debug:id/action_search    timeout=10s
     Click Element    id=de.danoeh.antennapod.debug:id/action_search
