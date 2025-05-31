@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.12.2 on win32)" generated="2025-05-31T13:55:01.285590" rpa="false" schemaversion="5">
+<suite id="s1" name="Example" source="C:\Users\user\Desktop\Appium Testing\AntennaPod\example.robot">
+<test id="s1-t1" name="Clear Queue And Assert Empty Message" line="10">
+<kw name="Open Application" owner="AppiumLibrary" type="SETUP">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-05-31T13:55:07.656637" elapsed="0.000000">Execution terminated by signal</status>
+</kw>
+<msg time="2025-05-31T13:55:07.657637" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<arg>${REMOTE_URL}</arg>
+<arg>platformName=${PLATFORM_NAME}</arg>
+<arg>automationName=${AUTOMATION_NAME}</arg>
+<arg>deviceName=${DEVICE_NAME}</arg>
+<arg>appPackage=${APP_PACKAGE}</arg>
+<arg>appActivity=${APP_ACTIVITY}</arg>
+<doc>Opens a new application to given Appium server.
+Capabilities of appium server, Android and iOS,
+Please check https://appium.io/docs/en/2.1/cli/args/
+| *Option*            | *Man.* | *Description*     |
+| remote_url          | Yes    | Appium server url |
+| alias               | no     | alias             |
+| strict_ssl          | No     | allows you to send commands to an invalid certificate host like a self-signed one. |</doc>
+<status status="FAIL" start="2025-05-31T13:55:01.549588" elapsed="6.108049">Execution terminated by signal</status>
+</kw>
+<kw name="Close Application" owner="AppiumLibrary" type="TEARDOWN">
+<kw name="Capture Page Screenshot" owner="AppiumLibrary">
+<msg time="2025-05-31T13:55:07.658637" level="FAIL">No application is open</msg>
+<doc>Takes a screenshot of the current page and embeds it into the log.</doc>
+<status status="FAIL" start="2025-05-31T13:55:07.658637" elapsed="0.063000">No application is open</status>
+</kw>
+<msg time="2025-05-31T13:55:07.722640" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+<msg time="2025-05-31T13:55:07.722640" level="FAIL">No application is open</msg>
+<doc>Closes the current application and also close webdriver session.</doc>
+<status status="FAIL" start="2025-05-31T13:55:07.658637" elapsed="0.065001">No application is open</status>
+</kw>
+<doc>點擊佇列、清除佇列、確認顯示 "No queued episodes"</doc>
+<status status="FAIL" start="2025-05-31T13:55:01.548588" elapsed="6.175050">Setup failed:
+Execution terminated by signal
+
+Also teardown failed:
+No application is open</status>
+</test>
+<status status="FAIL" start="2025-05-31T13:55:01.287588" elapsed="6.437049"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Example" id="s1" pass="0" fail="1" skip="0">Example</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2025-05-31T13:55:07.657637" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Execution terminated by signal</msg>
+<msg time="2025-05-31T13:55:07.722640" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: No application is open</msg>
+</errors>
+</robot>

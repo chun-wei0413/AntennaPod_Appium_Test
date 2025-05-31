@@ -68,7 +68,42 @@ Sort queue with one podcast
     Should Be Equal    ${item_text}    Can the Knicks force game 7?
 
 #TC-QC-05-01
-# Sort queue with at least two podcasts
+Sort queue with at least two podcasts
+    Prepare Queue With Two Podcast
+
+    # 點擊 "Queue" 頁面
+    Wait Until Element Is Visible     xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]     timeout=10
+    Click Element                     xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[2]
+
+    # 點選右上角功能欄
+    Wait Until Element Is Visible     xpath=//android.widget.ImageView[@content-desc="More options"]    timeout=10
+    Click Element                     xpath=//android.widget.ImageView[@content-desc="More options"]
+
+    # 點選 "Sort" 選項
+    Wait Until Element Is Visible     xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]    timeout=10
+    Click Element                     xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]
+
+    # 點選 "Episode title (ascending)" 選項
+    Wait Until Element Is Visible     xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]    timeout=10
+    Click Element                     xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]
+
+    # 退出排序選單
+    Click Element                     xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]
+
+    # 驗證畫面出現 "2 queued episode"
+    ${items}=    Get WebElements    xpath=//androidx.recyclerview.widget.RecyclerView[@resource-id="de.danoeh.antennapod.debug:id/recyclerView"]/*
+    
+    # reecyclerView should have one item => FrameLayout
+    Length Should Be    ${items}    2
+
+    # 取得第一個節目的標題內容（FrameLayout[1]）
+    ${first_title}=    Get Element Attribute    xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]    content-desc
+    Should Be Equal    ${first_title}    Can the Knicks force game 7?
+
+    # 取得第二個節目的標題內容（FrameLayout[2]）
+    ${second_title}=    Get Element Attribute    xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]    content-desc
+    Should Be Equal    ${second_title}    Thunder advance to NBA Finals
+
 
 
 
