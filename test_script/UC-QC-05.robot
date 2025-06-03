@@ -34,8 +34,8 @@ Sort empty queue
     Wait Until Element Is Visible     id=de.danoeh.antennapod.debug:id/emptyViewTitle    timeout=5
     Element Text Should Be           id=de.danoeh.antennapod.debug:id/emptyViewTitle    No queued episodes
 
-#TC-QC-05-02
 Sort queue with one podcast
+    [Tags]    TC-QC-05-02
     Prepare Queue With One Podcast
 
     # 點擊 "Queue" 頁面
