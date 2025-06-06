@@ -1,0 +1,3 @@
+*** Settings ***
+Resource    common.txt
+Resource    TC-FP-01.txt

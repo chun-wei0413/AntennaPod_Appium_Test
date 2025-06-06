@@ -1,0 +1,41 @@
+*** Settings ***
+Library    AppiumLibrary
+Resource    common.txt
+
+*** Keywords ***
+Filter Paused Podcast
+    ${filterButton}=    Set Variable    id=de.danoeh.antennapod:id/butFilter
+    ${filterMenu}=    Set Variable    id=de.danoeh.antennapod:id/filter_rows
+    ${pausedFilterButton}=    Set Variable    xpath=//android.widget.CompoundButton[@resource-id="de.danoeh.antennapod:id/filterButton1" and @text="Paused"]
+    ${confirmButton}=    Set Variable    id=de.danoeh.antennapod:id/confirmFiltermenu
+    Wait Until Element Is Visible    ${filterButton}
+    Click Element    ${filterButton}
+    Wait Until Element Is Visible    ${filterMenu}    timeout=3s
+    Click Element    ${pausedFilterButton}
+    Click Element    ${confirmButton}
+
+Podcast Should Be Visible
+    [Arguments]    ${episodeTitle}
+    ${podcastElement}=    Set Variable    xpath=//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod:id/container"]//android.widget.LinearLayout//android.widget.TextView[@text="${episodeTitle}"]
+    Wait Until Element Is Visible    ${podcastElement}    timeout=5s
+
+Filterd Message Should Be Visible
+    ${filterMessage}=    Set Variable    xpath=//android.widget.TextView[@text="Filtered"]
+    Wait Until Element Is Visible    ${filterMessage}    timeout=5s
+
+Verify Filter Is Applied
+    [Arguments]    ${episodeTitle}
+    Podcast Should Be Visible    ${episodeTitle}
+    Filterd Message Should Be Visible
+
+Clear Filter And Close Application
+    ${filterButton}=    Set Variable    id=de.danoeh.antennapod:id/butFilter
+    ${filterMenu}=    Set Variable    id=de.danoeh.antennapod:id/filter_rows
+    ${confirmButton}=    Set Variable    id=de.danoeh.antennapod:id/confirmFiltermenu
+    ${resetButton}=    Set Variable    id=de.danoeh.antennapod:id/resetFiltermenu
+    Click Element    ${filterButton}
+    Wait Until Element Is Visible    ${filterMenu}    timeout=3s
+    Click Element    ${resetButton}
+    Click Element    ${confirmButton}
+    Go To Home Page
+    Close Application
