@@ -11,16 +11,18 @@ ${DEVICE_NAME}         Android
 ${APP_PACKAGE}         de.danoeh.antennapod.debug
 ${APP_ACTIVITY}        de.danoeh.antennapod.activity.MainActivity
 
-${PODCAST_TITLE_1}    Can the Knicks force game 7?
-${PODCAST_TITLE_2}    Thunder advance to NBA Finals
-${PODCAST_TITLE_3}    How did we get here? | Morning Shoot Around
+${PODCAST_TITLE_1}    Haliburton & Pacers shock Thunder in Game 1
+${PODCAST_TITLE_2}    NBA Finals Mailbag: Morning Shoot Around
+${PODCAST_TITLE_3}    NBA Finals Game 1 Preview
 
 *** Keywords ***
 Open AntennaPod
-    Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    automationName=UiAutomator2    deviceName=${DEVICE_NAME}    appPackage=${PACKAGE_NAME}    appActivity=${Activity_NAME}
+    Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    automationName=${AUTOMATION_NAME}   deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
 
 Teardown And Clear App
-    Run Process    adb    shell    pm    clear    ${PACKAGE_NAME}
+    Run Process    adb    shell    pm clear ${APP_PACKAGE}
+    Sleep    1s
+    Close Application
 
 Add Episode To Queue
     [Arguments]    @{titles}
@@ -39,7 +41,7 @@ Add Episode To Queue
     Click Element    id=de.danoeh.antennapod.debug:id/actionButton
 
     # 點擊 Podcast 頻道 "The Athletic NBA Daily"
-    Wait Until Element Is Visible    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]    timeout=10s
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]    timeout=20s
     Click Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="The Athletic NBA Daily"]
 
     # 遍歷傳入的標題，依次選擇 Podcast
@@ -49,9 +51,6 @@ Add Episode To Queue
         Click Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="${title}"]
 
         # 點擊 "Stream" 按鈕
-        Wait Until Element Is Visible    id=de.danoeh.antennapod.debug:id/butAction1Text    timeout=10s
-        Click Element    id=de.danoeh.antennapod.debug:id/butAction1Text
-
         Wait Until Element Is Visible    id=de.danoeh.antennapod.debug:id/butAction1Text    timeout=10s
         Click Element    id=de.danoeh.antennapod.debug:id/butAction1Text
 
@@ -68,10 +67,72 @@ Go To Queue Page
     Wait Until Element Is Visible    xpath=//android.widget.FrameLayout[@content-desc="Queue"]    timeout=10s
     Click Element    xpath=//android.widget.FrameLayout[@content-desc="Queue"]
 
+Open Sort Menu
+    Wait Until Element Is Visible    xpath=//android.widget.ImageView[@content-desc="More options"]    timeout=10s
+    Click Element    xpath=//android.widget.ImageView[@content-desc="More options"]
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]    timeout=10s
+    Click Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Sort"]
+
+Select Episode Title Sort
+    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]    timeout=10s
+    Click Element    xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/button" and @text="Episode title"]
+
+Close Sort Menu
+    Click Element    xpath=//android.view.View[@resource-id="de.danoeh.antennapod.debug:id/touch_outside"]
+#Queue Management Keywords
+Lock Queue
+    Wait Until Element Is Visible    xpath=//android.widget.ImageView[@content-desc="More options"]    timeout=10s
+    Click Element    xpath=//android.widget.ImageView[@content-desc="More options"]
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]    timeout=10s
+    Click Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Lock queue"]
+    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="android:id/button1"]    timeout=10s
+    Click Element    xpath=//android.widget.Button[@resource-id="android:id/button1"]
+
+#Validate and Verify
 Validate Empty Queue Message
     Wait Until Element Is Visible    id=de.danoeh.antennapod.debug:id/emptyViewTitle    timeout=10s
     Element Text Should Be    id=de.danoeh.antennapod.debug:id/emptyViewTitle    No queued episodes
 
+Verify Single Podcast In Sorted Queue
+    [Arguments]    ${title}
+    ${items}=    Get WebElements    xpath=//androidx.recyclerview.widget.RecyclerView[@resource-id="de.danoeh.antennapod.debug:id/recyclerView"]/*
+    Length Should Be    ${items}    1
+    ${item_text}=    Get Text    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="${title}"]
+    Should Be Equal    ${item_text}    ${title}
+
+Verify Sorted Queue Order
+    [Arguments]    ${title1}    ${title2}
+    ${items}=    Get WebElements    xpath=//androidx.recyclerview.widget.RecyclerView[@resource-id="de.danoeh.antennapod.debug:id/recyclerView"]/*
+    Length Should Be    ${items}    2
+    ${first_title}=    Get Element Attribute    xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[1]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]    content-desc
+    ${second_title}=    Get Element Attribute    xpath=(//androidx.recyclerview.widget.RecyclerView/android.widget.FrameLayout[2]//android.widget.LinearLayout[@resource-id="de.danoeh.antennapod.debug:id/container"]//android.widget.LinearLayout)[1]    content-desc
+    Should Be Equal    ${first_title}    ${title1}
+    Should Be Equal    ${second_title}    ${title2}
+
+Clear Queue And Verify Empty
+    Wait Until Element Is Visible    xpath=//android.widget.ImageView[@content-desc="More options"]    timeout=10s
+    Click Element    xpath=//android.widget.ImageView[@content-desc="More options"]
+    Wait Until Element Is Visible    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]    timeout=10s
+    Click Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Clear queue"]
+    Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="android:id/button1"]    timeout=10s
+    Click Element    xpath=//android.widget.Button[@resource-id="android:id/button1"]
+    Wait Until Element Is Visible    id=de.danoeh.antennapod.debug:id/emptyViewTitle    timeout=10s
+    Element Text Should Be    id=de.danoeh.antennapod.debug:id/emptyViewTitle    No queued episodes
+
+Verify Queue Locked Message
+    Wait Until Element Is Visible    id=de.danoeh.antennapod.debug:id/snackbar_text    timeout=10s
+    Element Text Should Be    id=de.danoeh.antennapod.debug:id/snackbar_text    Queue locked
+
+Verify Queue Is Locked
+    Page Should Not Contain Element    id=de.danoeh.antennapod.debug:id/drag_handle
+
+Verify Podcasts In Queue
+    [Arguments]    @{titles}
+    FOR    ${title}    IN    @{titles}
+        Verify Podcast In Queue    ${title}
+    END
+
+# Queue Drag and Drop Keywords
 Drag Podcast From To
     [Arguments]    ${source_index}    ${target_index}
     ${source}=    Set Variable    xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/drag_handle"])[${source_index}]
@@ -117,12 +178,6 @@ Verify Podcast In Queue
     [Arguments]    ${title}
     Wait Until Page Contains Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="${title}"]    timeout=10s
     Page Should Contain Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle" and @text="${title}"]
-
-Verify Podcasts In Queue
-    [Arguments]    @{titles}
-    FOR    ${title}    IN    @{titles}
-        Verify Podcast In Queue    ${title}
-    END
 
 Verify Queue Order
     [Arguments]    ${title1}    ${title2}
