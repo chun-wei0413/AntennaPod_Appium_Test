@@ -1,0 +1,56 @@
+*** Settings ***
+Library    AppiumLibrary
+Library    Collections
+
+*** Keywords ***
+Open antennapod
+    Open Application   ${REMOTE_URL}
+    ...        platformName=${PLATFORM_NAME}
+    ...   deviceName=${DEVICE_NAME}
+    ...   automationName=UiAutomator2
+    ...    newCommandTimeout=2500
+    ...    appActivity=${Activity_NAME}
+    ...    appPackage=${PACKAGE_NAME}
+
+Teardown And Clear App
+    Run Process    adb    shell    pm    clear    ${PACKAGE_NAME}
+
+Go To Add Podcast Page
+    Click Element   xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[5]
+    Wait Until Element Is Visible   xpath=//android.widget.ListView/android.widget.LinearLayout[4]
+    Click Element   xpath=//android.widget.ListView/android.widget.LinearLayout[4]
+    Wait Until Element Is Visible   xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/errorRetryButton"]
+    Click Element   xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/errorRetryButton"]
+
+Go To Subscription Page
+    Click Element   xpath=(//android.widget.ImageView[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_view"])[4]
+
+Go Back To Previous Page
+    Wait Until Page Contains Element   xpath=//android.widget.ImageButton[@content-desc="Back"]
+    Click Element   xpath=//android.widget.ImageButton[@content-desc="Back"]
+
+Subscribe Podcast
+    [Arguments]    ${podcast_index}
+    Wait Until Element Is Visible   xpath=//android.widget.GridView[@resource-id="de.danoeh.antennapod.debug:id/discover_grid"]/android.widget.LinearLayout[${podcast_index}]
+    Click Element   xpath=//android.widget.GridView[@resource-id="de.danoeh.antennapod.debug:id/discover_grid"]/android.widget.LinearLayout[${podcast_index}]
+
+    Wait Until Element Is Visible   xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/butSubscribe"]
+    Click Element   xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/butSubscribe"]
+    
+Get Subscription List
+    Wait Until Element Is Visible   xpath=//android.widget.GridView[@resource-id="de.danoeh.antennapod.debug:id/subscriptions_grid"]
+    ${list}=    Create List
+    
+    ${elements}=    Get WebElements    xpath=//android.widget.GridView[@resource-id="de.danoeh.antennapod.debug:id/subscriptions_grid"]//android.widget.ImageView
+    ${element_count}=    Get Length    ${elements}
+    
+    FOR    ${i}    IN RANGE    1    ${element_count + 1}
+        ${desc}=    Get Element Attribute    xpath=(//android.widget.GridView[@resource-id="de.danoeh.antennapod.debug:id/subscriptions_grid"]//android.widget.ImageView)[${i}]    content-desc
+        Append To List    ${list}    ${desc}
+    END
+    
+    RETURN    ${list}
+
+Verify Subscription List Is Empty
+    Wait Until Element Is Visible   xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/emptyViewTitle"]
+    Element text should be  xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/emptyViewTitle"]    No subscriptions

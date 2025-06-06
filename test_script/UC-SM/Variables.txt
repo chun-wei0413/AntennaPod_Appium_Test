@@ -1,0 +1,9 @@
+*** Variables ***
+${REMOTE_URL}   http://127.0.0.1:4723
+${PLATFORM_NAME}    Android
+${DEVICE_NAME}  UiAutomator2
+${Activity_NAME}    de.danoeh.antennapod.activity.MainActivity
+${PACKAGE_NAME}     de.danoeh.antennapod.debug
+
+${PODCAST_TITLE_1}    The Best People with Nicolle Wallace
+${PODCAST_TITLE_2}    The Daily

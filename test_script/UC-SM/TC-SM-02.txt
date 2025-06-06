@@ -1,0 +1,25 @@
+*** Settings ***
+Library    AppiumLibrary
+
+*** Keywords ***
+Rename Podcast
+    [Arguments]    ${input_name}
+    Wait Until Element Is Visible   xpath=//android.widget.ImageView[@content-desc="More options"]
+    Click Element   xpath=//android.widget.ImageView[@content-desc="More options"]
+
+    Wait Until Element Is Visible   xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Rename podcast"]
+    Click Element   xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/title" and @text="Rename podcast"]
+
+    Wait Until Element Is Visible   xpath=//android.widget.EditText[@resource-id="de.danoeh.antennapod.debug:id/textInput"]
+    Clear Text    xpath=//android.widget.EditText[@resource-id="de.danoeh.antennapod.debug:id/textInput"]
+    Input Text    xpath=//android.widget.EditText[@resource-id="de.danoeh.antennapod.debug:id/textInput"]     ${input_name}
+
+    Click Element   xpath=//android.widget.Button[@resource-id="android:id/button1"]
+
+Verify Renamed Title Should Be Correct
+    [Arguments]    ${title}
+
+    Wait Until Element Is Visible    id=de.danoeh.antennapod.debug:id/txtvTitle
+    ${renamed_title}=    Get Text    id=de.danoeh.antennapod.debug:id/txtvTitle
+
+    Should Be Equal    ${title}    ${renamed_title}

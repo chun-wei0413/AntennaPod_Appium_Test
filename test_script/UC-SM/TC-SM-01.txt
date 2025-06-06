@@ -1,0 +1,8 @@
+*** Settings ***
+Library    AppiumLibrary
+
+*** Keywords ***
+Verify Subscription List Should Contain Podcast
+    [Arguments]    ${title}
+    Wait Until Element Is Visible    xpath=//android.widget.ImageView[@content-desc="${title}"]    timeout=10
+    Page Should Contain Element     xpath=//android.widget.ImageView[@content-desc="${title}"]
