@@ -4,22 +4,7 @@
 
 ---
 
-### 一、專案結構
-
-```
-AntennaPod/
-├── config/
-│   ├── settings.robot       # Robot Framework 設定檔
-│   └── variables.robot      # 測試變數檔
-├── report/                  # 執行測試後自動生成的報告目錄
-├── test.robot               # 測試案例主腳本
-├── run.bat                  # 一鍵執行測試並生成報告
-└── README.md                # 本檔案
-```
-
----
-
-### 二、元件關係說明
+### 一、元件關係說明
 
 1. **Android Studio**
 
@@ -49,7 +34,7 @@ AntennaPod/
 
 ---
 
-### 三、環境與安裝
+### 二、環境與安裝
 
 1. 安裝 Android Studio，並建立或匯入 AntennaPod 專案。
 2. 用 Android Studio 編譯並安裝 `de.danoeh.antennapod.debug` 到模擬器或真機。
@@ -69,90 +54,61 @@ AntennaPod/
 
 ---
 
-### 四、配置說明
 
-* `config/settings.robot`：引入 `AppiumLibrary`
-* `config/variables.robot`：定義 Appium Server URL、platformName、automationName、deviceName、appPackage、appActivity
-
-```robot
-*** Settings ***
-Library    AppiumLibrary
-
-*** Variables ***
-${REMOTE_URL}      http://127.0.0.1:4723
-${PLATFORM_NAME}   Android
-${AUTOMATION_NAME} UiAutomator2
-${DEVICE_NAME}     Android
-${APP_PACKAGE}     de.danoeh.antennapod.debug
-${APP_ACTIVITY}    de.danoeh.antennapod.activity.MainActivity
-```
-
----
-
-### 五、測試案例範例 (test.robot)
-
-以下示範一個「清空播放佇列並驗證空佇列訊息」的完整流程：
-
-```robot
-*** Settings ***
-Resource    config/settings.robot
-Resource    config/variables.robot
-
-*** Test Cases ***
-Clear Queue And Assert Empty Message
-    [Documentation]    點擊佇列、清除佇列、確認顯示 "No queued episodes"
-    Open Application    ${REMOTE_URL}    platformName=${PLATFORM_NAME}    automationName=${AUTOMATION_NAME}    deviceName=${DEVICE_NAME}    appPackage=${APP_PACKAGE}    appActivity=${APP_ACTIVITY}
-    
-    # 點擊下方導航欄「Queue」按鈕 (第二個圖示)
-    Click Element    xpath=(//android.widget.FrameLayout[@resource-id="de.danoeh.antennapod.debug:id/navigation_bar_item_icon_container"])[2]
-    Wait Until Page Contains Element    xpath=//android.widget.ImageView[@content-desc="More options"]    timeout=10s
-
-    # 點選更多選項
-    Click Element    xpath=//android.widget.ImageView[@content-desc="More options"]
-    Wait Until Page Contains Element    xpath=//android.widget.TextView[@text="Clear queue"]    timeout=10s
-
-    # 點選 Clear queue
-    Click Element    xpath=//android.widget.TextView[@text="Clear queue"]
-    # 點擊 Confirm
-    Click Element    xpath=//android.widget.Button[@resource-id="android:id/button1"]
-
-    # 驗證空佇列文字
-    Wait Until Page Contains Element    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/emptyViewTitle"]    10s
-    Element Text Should Be    xpath=//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/emptyViewTitle"]    No queued episodes
-
-    Close Application
-```
-
----
-
-### 六、執行測試
+### 三、執行測試
 
 1. 確保 Appium Server 正常啟動：
 
    ```bash
    appium --allow-cors
    ```
-2. 執行測試並生成報告：
+2. 到目標目錄底下:
+   ```
+   ___test_script
+      |
+      |___UC-FP
+      |   |
+      |   |___UC-FP.robot
+      |   
+      |___UC-MC
+      |   |
+      |   |___UC-MC.robot
+      |
+      |___UC-QC
+      |   |
+      |   |___UC-QC.robot
+      |
+      |___UC-SM
+          |
+          |__UC-SM.robot
+
+   ```
+3. 執行測試並生成報告：
 
    ```bash
-   run.bat
+   robot --outputdir report UC-FP.robot
    ```
-
-   或手動：
 
    ```bash
-   robot --outputdir report test.robot
+   robot --outputdir report UC-MC.robot
    ```
+
+   ```bash
+   robot --outputdir report UC-QC.robot
+   ```
+
+   ```bash
+   robot --outputdir report UC-SM.robot
+   ```
+
 3. 在 `report/` 目錄中查看 `log.html` 與 `report.html`。
 
 ---
 
-### 七、注意事項
+### 四、注意事項
 
 * 若定位失敗，可使用 Appium Inspector 重抓 XPath。
 * Appium 2.x 不需在 URL 加 `/wd/hub`。
 * 測試執行前請先開啟模擬器並安裝 APK。
 
 ---
-
-歡迎 pull requests、issue 回報，讓此專案更完善！
