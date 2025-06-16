@@ -34,7 +34,7 @@ Subscribe Podcast
     Wait Until Element Is Visible   xpath=//android.widget.GridView[@resource-id="de.danoeh.antennapod.debug:id/discover_grid"]/android.widget.LinearLayout[${podcast_index}]
     Click Element   xpath=//android.widget.GridView[@resource-id="de.danoeh.antennapod.debug:id/discover_grid"]/android.widget.LinearLayout[${podcast_index}]
 
-    Wait Until Element Is Visible   xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/butSubscribe"]
+    Wait Until Element Is Visible   xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/butSubscribe"]    timeout=10s
     Click Element   xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/butSubscribe"]
     
 Get Subscription List

@@ -6,4 +6,4 @@ ${Activity_NAME}    de.danoeh.antennapod.activity.MainActivity
 ${PACKAGE_NAME}     de.danoeh.antennapod.debug
 
 ${PODCAST_TITLE_1}    The Best People with Nicolle Wallace
-${PODCAST_TITLE_2}    The Daily
+${PODCAST_TITLE_2}    The Joe Rogan Experience

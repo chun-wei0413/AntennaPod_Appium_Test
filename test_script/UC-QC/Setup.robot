@@ -88,8 +88,7 @@ Lock Queue
     Wait Until Element Is Visible    xpath=//android.widget.Button[@resource-id="android:id/button1"]    timeout=10s
     Click Element    xpath=//android.widget.Button[@resource-id="android:id/button1"]
 
-#Validate and Verify
-Validate Empty Queue Message
+Verify Empty Queue Message
     Wait Until Element Is Visible    id=de.danoeh.antennapod.debug:id/emptyViewTitle    timeout=10s
     Element Text Should Be    id=de.danoeh.antennapod.debug:id/emptyViewTitle    No queued episodes
 
@@ -186,6 +185,12 @@ Verify Queue Order
     ${new_title_2}=    Get Text    xpath=(//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle"])[2]
     Should Be Equal    ${new_title_1}    ${title1}
     Should Be Equal    ${new_title_2}    ${title2}
+
+Verify Queue Order Not Change    
+    [Arguments]    ${title1}
+    Wait Until Page Contains Element    xpath=(//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle"])[1]    timeout=10s
+    ${new_title_1}=    Get Text    xpath=(//android.widget.TextView[@resource-id="de.danoeh.antennapod.debug:id/txtvTitle"])[1]
+    Should Be Equal    ${new_title_1}    ${title1}
 
 Verify Remove Action
     Wait Until Page Contains Element    xpath=//android.widget.Button[@resource-id="de.danoeh.antennapod.debug:id/snackbar_action"]    timeout=10s
